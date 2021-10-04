@@ -1,0 +1,50 @@
+components:
+  schemas:
+    Header:
+      type: "object"
+      required:
+        - "payloadUUID"
+        - "payloadContents"
+        - "source"
+        - "destination"
+        - "surveyId"
+      properties:
+        creationDateTime:
+          type: "string"
+          format: "date-time"
+        surveySponsorCaseId:
+          type: "integer"
+          example: "32423423424"
+        payloadUUID:
+          type: "string"
+          format: "uuid"
+        source:
+          type: "string"
+          example: "iCADE"
+        destination:
+          type: "string"
+          example: "MOJO"
+        mode:
+          type: "string"
+          enum:
+          - "Paper"
+          - "Online"
+          - "Other"
+        batchId:
+          type: "string"
+          example: "32438940984"
+        docId:
+          type: "string"
+          example: "3049823409283409823"
+        surveyId:
+          type: "string"            
+          example: "123456789"
+        masterTemplateId:
+          type: "object"
+          properties:
+            matrix: 
+              type: "string"
+              example: "POPT19_NOCTZN_Matrix_071619.xls"
+            version: 
+              type: "integer"
+              example: "43"
