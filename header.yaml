@@ -1,6 +1,4 @@
-components:
-  schemas:
-    Header:
+Header:
       type: "object"
       required:
         - "payloadUUID"
